@@ -5,7 +5,7 @@ Running `Open vSwitch (OVS) <http://www.openvswitch.org/>`_ on Containers
 =========================================================================
 
 House Keeping
-#############
+-------------
 
   *  Sources: https://github.com/servicefractal/ovs 
   *  Docker Images: https://hub.docker.com/r/shivarammysore/ovs or :code:`docker pull servicefractal/ovs`
@@ -14,15 +14,15 @@ House Keeping
   *  Pull Requests, bug fixes, etc welcome
 
 Introduction
-############
+------------
 
 Traditionally, we have OVS running as a part of Operating System (Unbutu, Fedora) installed primarily as a package.  This project is an effort to run OVS inside of a container.  We use `Docker <https://docker.com>`_ as a the default container platform and `Fedora CoreOS <https://getfedora.org/coreos/>`_ as as the underlying OS.
 
 Quick Start
-########### 
+===========
 
 Assumptions
-^^^^^^^^^^^
+-----------
 
     *  Fedora CoreOS with user ``core`` and ``$HOME`` directory under ``/home/core``
     *  Fedora CoreOS is installed on x86 bare metal with 4 ethernet ports (``eth0`` - ``eth3``)
@@ -37,7 +37,7 @@ Assumptions
 A `SVG version <docs/images/OVSonContainers.svg>`_ of the image
 
 Steps
-^^^^^
+-----
 
 .. code-block:: shell
    :linenos:
@@ -90,7 +90,7 @@ The above set of commands will install the pre-built docker image for OVS, start
 
 
 Troubleshooting
-^^^^^^^^^^^^^^^
+---------------
 
 Below are some useful commands to help with debugging.  This is not an exahaustive list, but just a quick reference.
 
