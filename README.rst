@@ -8,7 +8,7 @@ House Keeping
 -------------
 
   *  Sources: https://github.com/servicefractal/ovs 
-  *  Docker Images: https://hub.docker.com/r/shivarammysore/ovs or :code:`docker pull servicefractal/ovs`
+  *  Docker Images: https://hub.docker.com/r/shivarammysore/ovs or :code:`docker pull shivarammysore/ovs`
   *  Issues, feature requests, suggestions, - https://github.com/servicefractal/ovs/issues 
   *  Twitter: `@servicefractal <https://twitter.com/servicefractal>`_ 
   *  Pull Requests, bug fixes, etc welcome
@@ -39,8 +39,7 @@ A `SVG version <docs/images/OVSonContainers.svg>`_ of the image
 Steps
 -----
 
-.. code-block:: shell
-   :linenos:
+.. code-block:: console
 
   $ cd $HOME 
   $ sudo install -d --owner=root --group=root --mode=0755 \
