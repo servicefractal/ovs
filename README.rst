@@ -140,6 +140,7 @@ Custom networks
 ---------------
 
 When creating a network, extra options can be provided.
+
   *  :code:`--internal` disables outbound traffic (the network won't have a default gateway).
   *  :code:`--gateway` indicates which address to use for the gateway (when outbound traffic is allowed).
   *  :code:`--subnet` (in CIDR notation) indicates the subnet to use.
@@ -162,7 +163,6 @@ Docker Capabilities
 With OVS being run as a container, it needs some privileges to access network and system resources.  In Docker, this is controlled by providing `"Capability"<https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities>`_ permissions to the running container.  For OVS to work, Capabilities such as ``"SYS_MODULE"``, ``"NET_ADMIN"`` and ``"SYS_NICE"`` are required.
 
 .. code-block:: text
-   :linenos:
 
     Capability Key       Capability Description
     ===========================================
