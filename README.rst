@@ -194,7 +194,6 @@ With OVS being run as a container, it needs some privileges to access network an
 From http://man7.org/linux/man-pages/man7/capabilities.7.html
 
 .. code-block:: text
-   :linenos:
 
     CAP_NET_ADMIN
             Perform various network-related operations:
