@@ -30,6 +30,9 @@ Assumptions
     *  `Faucet <https://faucet.nz>`_ Openflow based Controller is used to test Openflow mode on OVS.
     *  :code:`openvswitch, vport_geneve, vport_gre, vport_vxlan, tap` Kernel modules are autoloaded on boot
 
+OVS on Containers Deployment Architecture
+-----------------------------------------
+
 .. image:: docs/images/OVSonContainers.png
    :width: 800
    :alt: OVS on Containers Deployment Archiecture
