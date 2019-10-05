@@ -160,7 +160,7 @@ Connecting and Disconnecting from networks dynamically
 Docker Capabilities
 -------------------
 
-With OVS being run as a container, it needs some privileges to access network and system resources.  In Docker, this is controlled by providing `"Capability"<https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities>`_ permissions to the running container.  For OVS to work, Capabilities such as ``"SYS_MODULE"``, ``"NET_ADMIN"`` and ``"SYS_NICE"`` are required.
+With OVS being run as a container, it needs some privileges to access network and system resources.  In Docker, this is controlled by providing `"Capability" <https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities>`_ permissions to the running container.  For OVS to work, Capabilities such as ``"SYS_MODULE"``, ``"NET_ADMIN"`` and ``"SYS_NICE"`` are required.
 
 .. code-block:: text
 
