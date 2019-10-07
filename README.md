@@ -1,5 +1,8 @@
 # Running [Open vSwitch (OVS)](http://www.openvswitch.org/) on Containers
 
+[![](https://images.microbadger.com/badges/version/shivarammysore/ovs.svg)](https://microbadger.com/images/shivarammysore/ovs "Version")
+[![](https://images.microbadger.com/badges/image/shivarammysore/ovs.svg)](https://microbadger.com/images/shivarammysore/ovs "Image Layers")
+
 ## Introduction
 
 Traditionally, we have OVS running as a part of Operating System (Unbutu, Fedora) installed primarily as a package.  This project is an effort to run OVS inside of a container.  We use [Docker](https://docker.com) as a the default container platform and [Fedora CoreOS](https://getfedora.org/coreos/) as as the underlying OS.
