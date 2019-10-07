@@ -1,15 +1,15 @@
-# Running Open vSwitch (OVS)[http://www.openvswitch.org/] on Containers
+# Running Open vSwitch [OVS](http://www.openvswitch.org/) on Containers
 
 ## Introduction
 
-Traditionally, we have OVS running as a part of Operating System (Unbutu, Fedora) installed primarily as a package.  This project is an effort to run OVS inside of a container.  We use (Docker)[https://docker.com] as a the default container platform and (Fedora CoreOS)[https://getfedora.org/coreos/] as as the underlying OS.
+Traditionally, we have OVS running as a part of Operating System (Unbutu, Fedora) installed primarily as a package.  This project is an effort to run OVS inside of a container.  We use [Docker](https://docker.com) as a the default container platform and [Fedora CoreOS](https://getfedora.org/coreos/) as as the underlying OS.
 
 ## Prerequisities
 
   *  Fedora CoreOS with user `core` and `$HOME` directory under `/home/core`
   *  Fedora CoreOS is installed on x86 bare metal with 4 ethernet ports (`eth0` - `eth3`)
   *  `eth0` is used as management port.  Rest of the ports are used as ports on OVS bridge
-  *  (Faucet)[https://faucet.nz] Openflow based Controller is used to test Openflow mode on OVS.
+  *  [Faucet](https://faucet.nz) Openflow based Controller is used to test Openflow mode on OVS.
   *  `openvswitch, vport_geneve, vport_gre, vport_vxlan, tap` Kernel modules are autoloaded on boot
 
 ## Usage
@@ -87,8 +87,8 @@ Below are some useful commands to help with debugging.  This is not an exahausti
 
 ## Find Us
 
-  *  Sources: [https://github.com/servicefractal/ovs]
-  *  Docker Images: [https://hub.docker.com/r/shivarammysore/ovs] or `docker pull shivarammysore/ovs`
-  *  Issues, feature requests, suggestions, - https://github.com/servicefractal/ovs/issues 
-  *  Twitter: `@servicefractal <https://twitter.com/servicefractal>`_ 
+  *  [Sources on GitHub](https://github.com/servicefractal/ovs)
+  *  [Docker Images](https://hub.docker.com/r/shivarammysore/ovs) or `docker pull shivarammysore/ovs`
+  *  [Issues, feature requests, suggestions](https://github.com/servicefractal/ovs/issues)
+  *  Twitter: [@servicefractal](https://twitter.com/servicefractal)
   *  Pull Requests, bug fixes, etc welcome
