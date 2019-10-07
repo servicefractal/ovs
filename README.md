@@ -1,4 +1,4 @@
-# Running `Open vSwitch (OVS)[http://www.openvswitch.org/] on Containers
+# Running Open vSwitch (OVS)[http://www.openvswitch.org/] on Containers
 
 ## Introduction
 
