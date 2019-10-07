@@ -16,9 +16,9 @@ Traditionally, we have OVS running as a part of Operating System (Unbutu, Fedora
 
 ### OVS on Containers Deployment Architecture
 
-![OVS on Containers Deployment Archiecture](docs/images/OVSonContainers.png)
+![OVS on Containers Deployment Archiecture](https://github.com/shivarammysore/ovs/raw/master/docs/images/OVSonContainers.png)
 
-A [SVG version](docs/images/OVSonContainers.svg) of the image
+A [SVG version](https://github.com/shivarammysore/ovs/raw/master/docs/images/OVSonContainers.svg) of the image
 
 ### Steps
 
