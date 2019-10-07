@@ -1,49 +1,36 @@
-:Authors:
-    Shivaram Mysore
+# Running `Open vSwitch (OVS)[http://www.openvswitch.org/] on Containers
 
-Running `Open vSwitch (OVS) <http://www.openvswitch.org/>`_ on Containers
-=========================================================================
+## House Keeping
 
-House Keeping
--------------
-
-  *  Sources: https://github.com/servicefractal/ovs 
-  *  Docker Images: https://hub.docker.com/r/shivarammysore/ovs or :code:`docker pull shivarammysore/ovs`
+  *  Sources: [https://github.com/servicefractal/ovs]
+  *  Docker Images: [https://hub.docker.com/r/shivarammysore/ovs] or `docker pull shivarammysore/ovs`
   *  Issues, feature requests, suggestions, - https://github.com/servicefractal/ovs/issues 
   *  Twitter: `@servicefractal <https://twitter.com/servicefractal>`_ 
   *  Pull Requests, bug fixes, etc welcome
 
-Introduction
-------------
+## Introduction
 
-Traditionally, we have OVS running as a part of Operating System (Unbutu, Fedora) installed primarily as a package.  This project is an effort to run OVS inside of a container.  We use `Docker <https://docker.com>`_ as a the default container platform and `Fedora CoreOS <https://getfedora.org/coreos/>`_ as as the underlying OS.
+Traditionally, we have OVS running as a part of Operating System (Unbutu, Fedora) installed primarily as a package.  This project is an effort to run OVS inside of a container.  We use (Docker)[https://docker.com] as a the default container platform and (Fedora CoreOS)[https://getfedora.org/coreos/] as as the underlying OS.
 
-Quick Start
-===========
+## Quick Start
 
-Assumptions
------------
+### Assumptions
 
-    *  Fedora CoreOS with user ``core`` and ``$HOME`` directory under ``/home/core``
-    *  Fedora CoreOS is installed on x86 bare metal with 4 ethernet ports (``eth0`` - ``eth3``)
-    *  ``eth0`` is used as management port.  Rest of the ports are used as ports on OVS bridge
-    *  `Faucet <https://faucet.nz>`_ Openflow based Controller is used to test Openflow mode on OVS.
-    *  :code:`openvswitch, vport_geneve, vport_gre, vport_vxlan, tap` Kernel modules are autoloaded on boot
+    *  Fedora CoreOS with user `core` and `$HOME` directory under `/home/core`
+    *  Fedora CoreOS is installed on x86 bare metal with 4 ethernet ports (`eth0` - `eth3`)
+    *  `eth0` is used as management port.  Rest of the ports are used as ports on OVS bridge
+    *  (Faucet)[https://faucet.nz] Openflow based Controller is used to test Openflow mode on OVS.
+    *  `openvswitch, vport_geneve, vport_gre, vport_vxlan, tap` Kernel modules are autoloaded on boot
 
-OVS on Containers Deployment Architecture
------------------------------------------
+### OVS on Containers Deployment Architecture
 
-.. image:: docs/images/OVSonContainers.png
-   :width: 800
-   :alt: OVS on Containers Deployment Archiecture
+![OVS on Containers Deployment Archiecture](docs/images/OVSonContainers.png)
 
-A `SVG version <docs/images/OVSonContainers.svg>`_ of the image
+A (SVG version)[docs/images/OVSonContainers.svg] of the image
 
-Steps
------
+### Steps
 
-.. code-block:: console
-
+```shell
   $ cd $HOME 
   $ sudo install -d --owner=root --group=root --mode=0755 \
     /home/core/ovs/log \
@@ -87,17 +74,16 @@ Steps
   $ docker exec -it ovs-vswitchd ovs-vsctl add-port ovs-br0 eth3 -- set Interface eth3 ofport_request=3 type=system
   $ docker exec -it ovs-vswitchd ovs-vsctl set-controller ovs-br0 tcp:openflow_controller.example.org:6653
   $ docker exec -it ovs-vswitchd ovs-vsctl show
+```
 
 The above set of commands will install the pre-built docker image for OVS, start it, create bridge, add system ports and finally configure the controller.
 
 
-Troubleshooting
----------------
+## Troubleshooting
 
 Below are some useful commands to help with debugging.  This is not an exahaustive list, but just a quick reference.
 
-.. code-block:: console
-
+```shell
   $ docker logs <container_name>
   $ sudo tail -f /home/core/ovs/log/ovs-vswitchd.log 
   $ ip a --> if ports are connected to OVS bridge, they will have ovs-system for the corresponding port
@@ -105,3 +91,4 @@ Below are some useful commands to help with debugging.  This is not an exahausti
   $ sudo modinfo openvswitch  --> Get Open vSwitch Kernel Module info 
   $ sudo /sbin/modprobe openvswitch  --> Load kernel module openvswitch
   $ sudo /sbin/lsmod | grep openvswitch  --> check if openvswitch kernel module is loaded
+```
