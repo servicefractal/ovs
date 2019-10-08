@@ -91,7 +91,7 @@ Below are some useful commands to help with debugging.  This is not an exahausti
 ## Find Us
 
   *  [Sources on GitHub](https://github.com/servicefractal/ovs)
-  *  [Docker Images](https://hub.docker.com/r/shivarammysore/ovs) or `docker pull shivarammysore/ovs`
+  *  [Docker Images](https://hub.docker.com/r/shivarammysore/ovs) or `docker pull shivarammysore/ovs` or `docker pull servicefractal/ovs`
   *  [Issues, feature requests, suggestions](https://github.com/servicefractal/ovs/issues)
   *  Twitter: [@servicefractal](https://twitter.com/servicefractal)
   *  Pull Requests, bug fixes, etc welcome
