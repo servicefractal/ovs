@@ -59,6 +59,8 @@ Docker Capabilities
 
 With OVS being run as a container, it needs some privileges to access network and system resources.  In Docker, this is controlled by providing `"Capability" <https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities>`_ permissions to the running container.  For OVS to work, Capabilities such as ``"SYS_MODULE"``, ``"NET_ADMIN"`` and ``"SYS_NICE"`` are required.
 
+A very useful picture to understand Capabilities is available at https://twitter.com/b0rk/status/1217168566556004352/photo/1
+
 .. code-block:: text
 
     Capability Key       Capability Description
@@ -191,4 +193,5 @@ References
   *  Useful ``iptable`` commands - https://www.cyberciti.biz/tips/linux-iptables-examples.html 
   *  Linux Netdev - https://arthurchiao.github.io/blog/ovs-deep-dive-4-patch-port/  - Read about why type=system, type=netdev, type=internal, etc are used with ovs-vsctl add-port command
   *  Namespaces - https://www.edureka.co/community/33605/what-network-namespace-access-network-namespace-container
-  *   Docker and Network namespaces - https://platform9.com/blog/container-namespaces-deep-dive-container-networking/
+  *  Docker and Network namespaces - https://platform9.com/blog/container-namespaces-deep-dive-container-networking/
+  *  Capabilities - a quick cartoon style tutorial - https://twitter.com/b0rk/status/1217168566556004352/photo/1
